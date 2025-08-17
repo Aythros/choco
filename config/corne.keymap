@@ -17,12 +17,12 @@
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | ALT | SHFT|1\SPC|   |2\ENT| BSPC | CTRL|
+//                    | ALT | CTRL|1\SPC|   |2\ENT| SHFT | BSPC|
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-            &kp LALT &kp LSHFT &lt 1 SPACE   &lt 2 RET &kp BSPC &kp LCTRL
+            &kp LALT &kp LCTRL &lt 1 SPACE   &lt 2 RET &kp LSHFT &kp BSPC
                         >;
                 };
                 lower_layer {
@@ -48,7 +48,7 @@
    &kp TAB     &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT     &kp CARET   &kp AMPS    &kp ASTRK   &kp LPAR   &kp RPAR   &kp BSPC
    &kp LCTRL   &kp SQT    &kp LGUI   &kp ESC    &kp TAB    &kp S         &kp MINUS   &kp EQUAL   &kp LBKT    &kp RBKT   &kp BSLH   &kp GRAVE
    &kp LSHFT   &trans     &kp DEL    &trans     &trans     &soft_off     &kp UNDER   &kp PLUS    &kp LBRC    &kp RBRC   &kp PIPE   &kp TILDE
-                                     &trans     &trans     &trans        &trans      &kp LCTRL   &trans
+                                     &trans     &trans     &trans        &trans      &trans      &trans
                         >;
                 };
         };
