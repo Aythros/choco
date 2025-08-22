@@ -42,12 +42,12 @@
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
 // | CTRL |  '  | GUI | ESC | TAB |  S  |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     | DEL |     |     | off |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+// | SHFT | F8  | DEL |     |     | off |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    |     |     |     |   |     | CTRL|     |
                        bindings = <
    &kp TAB     &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT     &kp CARET   &kp AMPS    &kp ASTRK   &kp LPAR   &kp RPAR   &kp BSPC
    &kp LCTRL   &kp SQT    &kp LGUI   &kp ESC    &kp TAB    &kp S         &kp MINUS   &kp EQUAL   &kp LBKT    &kp RBKT   &kp BSLH   &kp GRAVE
-   &kp LSHFT   &trans     &kp DEL    &trans     &trans     &soft_off     &kp UNDER   &kp PLUS    &kp LBRC    &kp RBRC   &kp PIPE   &kp TILDE
+   &kp LSHFT   &kp F8     &kp DEL    &trans     &trans     &soft_off     &kp UNDER   &kp PLUS    &kp LBRC    &kp RBRC   &kp PIPE   &kp TILDE
                                      &trans     &trans     &trans        &trans      &trans      &trans
                         >;
                 };
