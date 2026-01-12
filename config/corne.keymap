@@ -29,12 +29,12 @@
 // -----------------------------------------------------------------------------------------
 // |  TAB | BT1 |  7  |  8  |  9  |     |   |     |     | UP  |     | BT4 | BSPC |
 // | SHFT | BT2 |  4  |  5  |  6  |     |   |     | LFT | DWN | RGT | BT5 |      |
-// | BTCLR| BT3 |  1  |  2  |  3  |  0  |   |tog 4|     |     |     |BTCLR|      |
+// | BTCLR| BT3 |  1  |  2  |  3  |  0  |   |tog 3|     |     |     |BTCLR|      |
 //                    |     |     |     |   |     |     |     |                  
                         bindings = <
    &kp TAB    &bt BT_SEL 1  &kp N7   &kp N8    &kp N9    &trans         &trans   &trans    &kp UP    &trans     &bt BT_SEL 4  &kp BSPC
    &kp LSHFT  &bt BT_SEL 2  &kp N4   &kp N5    &kp N6    &trans         &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &bt BT_SEL 5  &trans
-   &bt BT_CLR &bt BT_SEL 3  &kp N1   &kp N2    &kp N3    &kp N0         &tog 4   &trans    &trans    &trans     &bt BT_CLR    &trans
+   &bt BT_CLR &bt BT_SEL 3  &kp N1   &kp N2    &kp N3    &kp N0         &tog 3   &trans    &trans    &trans     &bt BT_CLR    &trans
                                      &trans    &trans    &trans         &trans   &trans    &trans
                         >;
                 };
@@ -56,12 +56,12 @@
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  Q  |  W  |  E  |  R  |   |  7  |  8  |  9  |  M  | ESC | BSPC |
 // | SHFT |  2  |  A  |  S  |  D  |  F  |   |  4  |  5  |  6  |  /  |  .  |      |
-// | BTCLR|  3  |  z  |  X  |  C  |  V  |   |  0  |  T  |  G  |  B  |tog 4|      |
+// | BTCLR|  3  |  z  |  X  |  C  |  V  |   |  0  |  T  |  G  |  B  |tog 3|      |
 //                    | CTRL| SHFT| SPC |   | ENT | alt | BSPC|                  
                         bindings = <
    &kp TAB   &kp 1 &kp Q &kp W &kp E &kp R   &kp 7 &kp 8  &kp 9  &kp M      &kp ESC  &kp BSPC
    &kp LCTRL &kp 2 &kp A &kp S &kp D &kp F   &kp 4 &kp 5  &kp 6  &kp FSLH   &kp DOT  &kp trans
-   &kp LSHFT &kp 3 &kp Z &kp X &kp C &kp V   &kp 0 &kp T  &kp G  &kp B      &tog 4   &kp trans
+   &kp LSHFT &kp 3 &kp Z &kp X &kp C &kp V   &kp 0 &kp T  &kp G  &kp B      &tog 3   &kp trans
              &kp LCTRL &kp LSHFT &kp SPACE   &kp RET &kp LALT &kp BSPC 
                         >;
                 };
