@@ -52,5 +52,18 @@
                         >;
                 };
 
+                gaming_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  1  |  Q  |  W  |  E  |  R  |   |  7  |  8  |  9  |  M  | ESC | BSPC |
+// | SHFT |  2  |  A  |  S  |  D  |  F  |   |  4  |  5  |  6  |  /  |  .  |      |
+// | BTCLR|  3  |  z  |  X  |  C  |  V  |   |  0  |  T  |  G  |  B  |tog 4|      |
+//                    | CTRL| SHFT| SPC |   | ENT | alt | BSPC|                  
+                        bindings = <
+   &kp TAB   &kp 1 &kp Q &kp W &kp E &kp R   &kp 7 &kp 8  &kp 9  &kp M      &kp ESC  &kp BSPC
+   &kp LCTRL &kp 2 &kp A &kp S &kp D &kp F   &kp 4 &kp 5  &kp 6  &kp FSLH   &kp DOT  &kp trans
+   &kp LSHFT &kp 3 &kp Z &kp X &kp C &kp V   &kp 0 &kp T  &kp G  &kp B      &tog 4   &kp trans
+             &kp LCTRL &kp LSHFT &kp SPACE   &kp RET &kp LALT &kp BSPC 
+                        >;
+                };
         };
 };
