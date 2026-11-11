@@ -10,7 +10,7 @@
 #include <dt-bindings/gpio/gpio.h>
 
 /* Override the keyboard scan matrix to remove the broad key matrix wakeup privilege */
-&kscan {
+&kscan0 {
         /delete-property/ wakeup-source;
 };
 
