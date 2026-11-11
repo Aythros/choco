@@ -9,17 +9,13 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/gpio/gpio.h>
 
+/* Override the keyboard scan matrix to remove the broad key matrix wakeup privilege */
+&kscan {
+        /delete-property/ wakeup-source;
+};
+
 / {
-        behaviors {
-                /* This overrides the soft_off behavior to ONLY trust the reset pin */
-                soft_off_lock: soft_off_lock {
-                        compatible = "zmk,behavior-soft-off";
-                        #binding-cells = <0>;
-                        wakeup-sources = <&reset_button_pin>;
-                };
-        };
-        
-        /* Explicitly map the nice!nano hardware reset pin (GPIO 0.18) */
+        /* Explicitly map the nice!nano hardware reset pin (GPIO 0.18) as the lone system waker */
         reset_button_pin: reset_pin {
                 compatible = "zmk,gpio-key";
                 gpios = <&gpio0 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
@@ -64,7 +60,7 @@
                        bindings = <
    &kp TAB     &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET   &kp AMPS    &kp ASTRK   &kp LPAR   &kp RPAR   &kp BSPC
    &kp LCTRL   &kp SQT    &kp LGUI   &kp ESC    &kp TAB    &kp S          &kp MINUS   &kp EQUAL   &kp LBKT    &kp RBKT   &kp BSLH   &kp GRAVE
-   &kp LSHFT   &kp F8     &kp DEL    &trans     &trans     &soft_off_lock &kp UNDER   &kp PLUS    &kp LBRC    &kp RBRC   &kp PIPE   &kp TILDE
+   &kp LSHFT   &kp F8     &kp DEL    &trans     &trans     &soft_off      &kp UNDER   &kp PLUS    &kp LBRC    &kp RBRC   &kp PIPE   &kp TILDE
                                      &trans     &trans     &trans         &trans      &trans      &trans
                         >;
                 };
